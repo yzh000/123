@@ -1,0 +1,26 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d; /* 确保子元素保持3D空间 */
+    transform: rotateX(0deg) rotateY(0deg); /* 初始旋转角度 */
+    animation: rotate 5s linear infinite; /* 无限循环的旋转动画 */
+  }
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc; /* 可选边框样式 */
+  }
+  .front { transform: translateZ(100px); } /* 设置前方的面在Z轴上的位置 */
+  .back { transform: rotateY(180deg) translateZ(100px); } /* 设置后方的面在Y轴和Z轴上的位置 */
+  .left { transform: rotateY(-90deg) translateZ(100px); } /* 设置左方的面在Y轴和Z轴上的位置 */
+  .right { transform: rotateY(90deg) translateZ(100px); } /* 设置右方的面在Y轴和Z轴上的位置 */
+  .top { transform: rotateX(90deg) translateZ(100px); } /* 设置上方的面在X轴和Z轴上的位置 */
+  .bottom { transform: rotateX(-90deg) translateZ(100px); } /* 设置下方的面在X轴和Z轴上的位置 */
